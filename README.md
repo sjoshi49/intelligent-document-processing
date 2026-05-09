@@ -61,12 +61,6 @@ The classification prompt went through multiple iterations before reaching produ
 - **Reasoning field separation:** Adding dedicated `*Reasoning` fields separated from the classification output improved classification accuracy. The model's chain-of-thought was previously bleeding into the classification field and corrupting downstream parsing.
 - **Confidence scoring:** After adding the `Confidence` field, low-confidence records clustered around genuinely ambiguous invoice language. This made human review targeted rather than random sampling.
 
-## Production Context
-
-This repository is a sanitized portfolio reconstruction of a document intelligence pipeline built during an enterprise AI engineering internship. The original system processed thousands of unstructured commercial invoices and achieved **87.5% classification accuracy**, with projected annual cost savings exceeding **$3M** based on identified internalizable transfer movements.
-
-The domain has been generalised (logistics vendor names, invoice field labels) and public-domain data is used in place of proprietary invoices. The architecture, pipeline logic, prompt engineering methodology, caching strategy, and derived field computations are authentically reproduced.
-
 ## Tech Stack
 
 - **LLM:** GPT-4o via OpenAI API
