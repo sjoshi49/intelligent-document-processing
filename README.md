@@ -2,7 +2,7 @@
 
 A production-grade document classification pipeline that extracts structured fields from unstructured PDF invoices and classifies each vehicle movement using GPT-4 with iterative prompt engineering.
 
-**Domain:** Commercial logistics cost optimization — identifying when third-party vendor invoices represent movements that could have been handled internally at lower cost.
+**Domain:** Commercial logistics cost optimization, identifying when third-party vendor invoices represent movements that could have been handled internally at lower cost.
 
 ---
 
@@ -16,7 +16,7 @@ local directory       →    pytesseract (scanned)    iterative prompt versions 
                                                      JSON schema enforcement       CSV export
 ```
 
-The pipeline is **prompt-version-aware**: each processed invoice is cached against a hash of both the invoice content and the current prompt file. If the prompt is updated, all invoices are automatically reprocessed. If neither changes, cached results are served instantly — making iterative prompt development fast.
+The pipeline is **prompt-version-aware**: each processed invoice is cached against a hash of both the invoice content and the current prompt file. If the prompt is updated, all invoices are automatically reprocessed. If neither changes, cached results are served instantly, making iterative prompt development fast.
 
 ---
 
